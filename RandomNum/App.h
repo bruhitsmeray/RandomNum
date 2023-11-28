@@ -155,7 +155,7 @@ namespace RandomNum {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(320, 25);
 			this->button1->TabIndex = 3;
-			this->button1->Text = L"Randomize";
+			this->button1->Text = L"Generate";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &App::button1_Click);
 			// 
@@ -185,12 +185,12 @@ namespace RandomNum {
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(344, 251);
-			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->Controls->Add(this->groupBox4);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->groupBox3);
 			this->Controls->Add(this->groupBox2);
 			this->Controls->Add(this->groupBox1);
+			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
 			this->MaximizeBox = false;
 			this->Name = L"App";
 			this->ShowIcon = false;
