@@ -1,5 +1,10 @@
-#include "cstdlib"
+#include <cstdlib>
 #include <ctime>
+
+#ifdef _WIN64
+	#define WIN64_LEAN_AND_MEAN
+	#include "windows.h"
+#endif
 
 #pragma once
 
@@ -221,11 +226,18 @@ namespace RandomNum {
 		}
 
 		private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
+			#ifdef _WIN64
+				int seed = GetTickCount64(); 
+			#elif __linux__
+				int seed = time(NULL);
+			#endif
+
+			
+			srand(seed);
 			if (App::listBox1->Items->Count >= 1) {
 				App::listBox1->Items->Clear();
 			}
 			for (int i = 0; i < amount; i++) {
-				srand((unsigned int)time(NULL));
 				result = rand() % (max - min + 1) + min;
 				App::listBox1->Items->Add(result.ToString());
 			}
