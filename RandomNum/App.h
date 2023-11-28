@@ -1,4 +1,5 @@
 #include "cstdlib"
+#include <ctime>
 
 #pragma once
 
@@ -224,6 +225,7 @@ namespace RandomNum {
 				App::listBox1->Items->Clear();
 			}
 			for (int i = 0; i < amount; i++) {
+				srand((unsigned int)time(NULL));
 				result = rand() % (max - min + 1) + min;
 				App::listBox1->Items->Add(result.ToString());
 			}
