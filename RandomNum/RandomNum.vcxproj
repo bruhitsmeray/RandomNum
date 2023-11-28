@@ -123,13 +123,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
-    <ClCompile Include="AssemblyInfo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="App.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-    <ClInclude Include="AssemblyInfo.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="App.resx">
